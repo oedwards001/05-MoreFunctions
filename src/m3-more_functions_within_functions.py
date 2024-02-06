@@ -1,5 +1,7 @@
+import math
+
 ###############################################################################
-# TODO: 1. (6 pts)
+# Done: 1. (6 pts)
 #
 #   In this module, we are going to start the process of making our own
 #   calculator. It is going to be a very simple calculator, because the user
@@ -27,9 +29,28 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def add(first_param, second_param):
+    addition = first_param + second_param
+    return addition    
+  
+def subtract(first_param, second_param):
+    subtraction = first_param - second_param
+    return subtraction
+
+def multiply(first_param, second_param):
+    multiplication = first_param*second_param
+    return multiplication
+
+def divide(first_param, second_param):
+    division = first_param / second_param
+    return division
+
+def power(first_param, second_param):
+    powerraise = math.pow(first_param, second_param)
+    return powerraise
 
 ###############################################################################
-# TODO: 2. (8 pts)
+# Done6: 2. (8 pts)
 #
 #   Now we need a function that will act as the control unit. It will ask the
 #   user for inputs and call the math functions.
@@ -59,9 +80,40 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    print("Hello, how are you?")
+
+    number1 = input("number1: ") 
+    number1 = int(number1) 
+    print(f"Your first number chosen is {number1}.") 
+    
+    number2 = input("number2: ")
+    number2 = int(number2)
+    print(f"Your second number chosen is {number2}.")
+
+
+    addition = add(first_param=number1, second_param=number2) 
+    print(f"Add: {addition}") 
+
+    subtraction = subtract(first_param=number1, second_param=number2)
+    print (f"Subtract: {subtraction}")
+
+    multiplication = multiply(first_param=number1, second_param=number2)
+    print (f"Multiply: {multiplication}")
+
+    division = divide(first_param=number1, second_param=number2)
+    print (f"Divide: {division}")
+
+    powerraise = power(first_param=number1, second_param=number2)
+    print (f"Power: {powerraise}")
+
+print("Goodbye!")
+    
+main()
+    
 
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (4 pts)
+# Done: 3. EXTRA CREDIT (4 pts)
 #
 #   For this _TODO_, do NOT write your code beneath it. You will be modifying
 #   your code above. This is extra credit, so you don't need to complete this
